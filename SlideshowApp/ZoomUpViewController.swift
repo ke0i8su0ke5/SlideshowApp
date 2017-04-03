@@ -10,9 +10,15 @@ import UIKit
 
 class ZoomUpViewController: UIViewController {
 
+    @IBOutlet weak var zoomUpImage: UIImageView!
+    
+    var selectedImage:UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 遷移元画面で選択された画像を表示する
+        zoomUpImage.image = selectedImage
         // Do any additional setup after loading the view.
     }
 

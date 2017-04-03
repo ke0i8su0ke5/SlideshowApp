@@ -22,11 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6V6-sW-00o">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-NL-yfo">
-                                <rect key="frame" x="56" y="444" width="41" height="36"/>
+                                <rect key="frame" x="56" y="411" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
@@ -34,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz2-k8-thQ">
-                                <rect key="frame" x="278" y="444" width="41" height="36"/>
+                                <rect key="frame" x="278" y="411" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -42,33 +39,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd0-Wy-hjn">
-                                <rect key="frame" x="164" y="544" width="46" height="36"/>
+                                <rect key="frame" x="167" y="551" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="start_stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xis-6X-LGe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWI-Nj-b2M">
+                                <rect key="frame" x="86" y="90" width="203" height="150"/>
+                                <state key="normal" image="one"/>
+                                <connections>
+                                    <segue destination="xqo-xw-XBa" kind="show" id="KYO-Q5-P4X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6V6-sW-00o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Ap-zJ-JLO"/>
-                            <constraint firstItem="6V6-sW-00o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Hg-8v-irp"/>
-                            <constraint firstItem="pd0-Wy-hjn" firstAttribute="top" secondItem="6V6-sW-00o" secondAttribute="bottom" constant="170" id="3Jj-b0-uzL"/>
-                            <constraint firstItem="d1e-NL-yfo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="3Uy-uz-6rb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6V6-sW-00o" secondAttribute="bottom" constant="293" id="8Bc-pE-Ion"/>
-                            <constraint firstAttribute="trailing" secondItem="6V6-sW-00o" secondAttribute="trailing" id="9zV-90-Sfq"/>
-                            <constraint firstItem="d1e-NL-yfo" firstAttribute="top" secondItem="6V6-sW-00o" secondAttribute="bottom" constant="70" id="BF7-ZW-ZcR"/>
-                            <constraint firstItem="Fz2-k8-thQ" firstAttribute="top" secondItem="6V6-sW-00o" secondAttribute="bottom" constant="70" id="Bwu-0A-waE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fz2-k8-thQ" secondAttribute="trailing" constant="40" id="GHT-ii-yAy"/>
-                            <constraint firstItem="pd0-Wy-hjn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="cSo-Es-ST8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pd0-Wy-hjn" secondAttribute="trailing" constant="149" id="dGY-sd-dyB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d1e-NL-yfo" secondAttribute="bottom" constant="220" id="201-um-I3p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hWI-Nj-b2M" secondAttribute="trailing" constant="70" id="24d-Fn-iNA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fz2-k8-thQ" secondAttribute="trailing" constant="40" id="LgO-vV-fDS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pd0-Wy-hjn" secondAttribute="trailing" constant="151" id="OSz-S8-u0z"/>
+                            <constraint firstItem="hWI-Nj-b2M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="RgB-Hi-S5D"/>
+                            <constraint firstItem="pd0-Wy-hjn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="151" id="YRN-ke-4m8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fz2-k8-thQ" secondAttribute="bottom" constant="220" id="oAW-jW-YNg"/>
+                            <constraint firstItem="d1e-NL-yfo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="q5Q-Zt-rXP"/>
+                            <constraint firstItem="hWI-Nj-b2M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="rAy-nf-8aN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pd0-Wy-hjn" secondAttribute="bottom" constant="80" id="shj-06-fkO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Fz2-k8-thQ" id="X3E-g8-Psr"/>
+                        <outlet property="imageButton" destination="hWI-Nj-b2M" id="Zye-T4-bP4"/>
                         <outlet property="prevButton" destination="d1e-NL-yfo" id="wPu-LA-44x"/>
-                        <outlet property="slideImage" destination="6V6-sW-00o" id="90K-g9-f1X"/>
                         <outlet property="startStopButton" destination="pd0-Wy-hjn" id="FJx-uu-Zzo"/>
                     </connections>
                 </viewController>
@@ -91,28 +94,37 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1C-pq-BhF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戻る" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-qE-gLO">
-                                <rect key="frame" x="166" y="544" width="56" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-qT-RY8">
+                                <rect key="frame" x="166" y="511" width="43" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="09T-No-HGE" kind="unwind" unwindAction="unwindWithSegue:" id="wga-38-Qny"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A1C-pq-BhF" firstAttribute="top" secondItem="GXH-N5-Inf" secondAttribute="top" id="4Nl-KD-rSm"/>
                             <constraint firstItem="A1C-pq-BhF" firstAttribute="leading" secondItem="GXH-N5-Inf" secondAttribute="leading" id="5YD-vj-i2l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jc7-qE-gLO" secondAttribute="trailing" constant="137" id="8Lx-Cj-kuN"/>
+                            <constraint firstItem="SSF-qT-RY8" firstAttribute="leading" secondItem="GXH-N5-Inf" secondAttribute="leadingMargin" constant="150" id="BSN-7C-rrq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SSF-qT-RY8" secondAttribute="trailing" constant="150" id="GhE-oh-Scb"/>
                             <constraint firstItem="VXo-vS-4Zk" firstAttribute="top" secondItem="A1C-pq-BhF" secondAttribute="bottom" constant="293" id="J2I-1Z-ccl"/>
                             <constraint firstAttribute="trailing" secondItem="A1C-pq-BhF" secondAttribute="trailing" id="Pot-Nf-Vwk"/>
-                            <constraint firstItem="Jc7-qE-gLO" firstAttribute="leading" secondItem="GXH-N5-Inf" secondAttribute="leadingMargin" constant="150" id="tvc-iQ-8kg"/>
-                            <constraint firstItem="Jc7-qE-gLO" firstAttribute="top" secondItem="A1C-pq-BhF" secondAttribute="bottom" constant="170" id="ynp-7P-ko8"/>
+                            <constraint firstItem="VXo-vS-4Zk" firstAttribute="top" secondItem="SSF-qT-RY8" secondAttribute="bottom" constant="120" id="wDg-jF-Mwb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="zoomUpImage" destination="A1C-pq-BhF" id="ak8-Ty-4St"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyw-wb-d3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="09T-No-HGE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="one" width="200" height="150"/>
+    </resources>
 </document>

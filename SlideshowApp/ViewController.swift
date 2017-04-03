@@ -15,28 +15,33 @@ class ViewController: UIViewController {
     let imageArray: [UIImage] =
         [UIImage(named: "one")!, UIImage(named: "two")!, UIImage(named: "three")!, UIImage(named: "four")!]
     
-    @IBOutlet weak var slideImage: UIImageView!
+    @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        slideImage.image = imageArray[count]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のZoomUpViewControllerを取得する
+        let zoomUpViewController:ZoomUpViewController = segue.destination as! ZoomUpViewController
+        // 遷移先のZoomUpViewControllerで宣言している、selectedImageにアクセスする
+        zoomUpViewController.selectedImage = imageArray[count]
+    }
+    
     @IBAction func prev(_ sender: Any) {
         if (count == imageArray.count - 1) {
             count = 0
         } else {
             count+=1
         }
-        slideImage.image = imageArray[count]
+        imageButton.setImage(imageArray[count], for: .normal)
     }
 
     @IBAction func back(_ sender: Any) {
@@ -45,7 +50,7 @@ class ViewController: UIViewController {
         } else {
             count-=1
         }
-        slideImage.image = imageArray[count]
+        imageButton.setImage(imageArray[count], for: .normal)
     }
     
     @IBAction func start_stop(_ sender: Any) {
@@ -71,6 +76,9 @@ class ViewController: UIViewController {
             // ボタン名を変更
             self.startStopButton.setTitle("再生", for: UIControlState.normal)
         }
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
     }
 }
 

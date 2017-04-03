@@ -33,6 +33,20 @@ class ViewController: UIViewController {
         let zoomUpViewController:ZoomUpViewController = segue.destination as! ZoomUpViewController
         // 遷移先のZoomUpViewControllerで宣言している、selectedImageにアクセスする
         zoomUpViewController.selectedImage = imageArray[count]
+        
+        // 再生中に画像タップされた場合、停止する
+        if self.startStopButton.titleLabel!.text == "停止" {
+            if self.timer != nil {
+                self.timer.invalidate()
+                self.timer = nil
+            }
+            // 進む、戻るボタンをタップ可にする
+            self.prevButton.isEnabled = true
+            self.backButton.isEnabled = true
+            
+            // ボタン名を変更
+            self.startStopButton.setTitle("再生", for: UIControlState.normal)
+        }
     }
     
     @IBAction func prev(_ sender: Any) {

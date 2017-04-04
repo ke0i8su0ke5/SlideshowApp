@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     @IBAction func start_stop(_ sender: Any) {
         if self.startStopButton.titleLabel!.text == "再生" {
             if self.timer == nil {
-                self.timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(prev),userInfo: nil, repeats: true)
+                self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(prev),userInfo: nil, repeats: true)
             }
             // 進む、戻るボタンをタップ不可にする
             self.prevButton.isEnabled = false

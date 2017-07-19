@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             // ボタン名を変更
             self.startStopButton.setTitle("再生", for: UIControlState.normal)
             
-            // コメント
+            // コメントコメント
         }
     }
     

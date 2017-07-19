@@ -47,6 +47,8 @@ class ViewController: UIViewController {
             // ボタン名を変更
             self.startStopButton.setTitle("再生", for: UIControlState.normal)
         }
+        
+        // コメント１
     }
     
     @IBAction func prev(_ sender: Any) {
@@ -55,6 +57,8 @@ class ViewController: UIViewController {
         } else {
             count+=1
         }
+        
+        // コメント２
         imageButton.setImage(imageArray[count], for: .normal)
     }
 

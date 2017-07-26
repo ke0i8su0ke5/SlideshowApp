@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // コメント１
         // segueから遷移先のZoomUpViewControllerを取得する
         let zoomUpViewController:ZoomUpViewController = segue.destination as! ZoomUpViewController
         // 遷移先のZoomUpViewControllerで宣言している、selectedImageにアクセスする
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
             self.backButton.isEnabled = true
             
             // ボタン名を変更
+            // コメント２
             self.startStopButton.setTitle("再生", for: UIControlState.normal)
         }
     }
